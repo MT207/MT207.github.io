@@ -3,44 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Liên hệ & Thông tin</title>
+    <title>Portfolio | Lập trình viên Full-stack</title>
+    <!-- Nhúng thư viện Tailwind CSS qua CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
-        nav { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 1px solid #ccc; }
-        nav a { margin-right: 15px; text-decoration: none; color: #0366d6; font-weight: bold; }
-        section { padding-top: 60px; margin-bottom: 40px; }
-        .spacer { height: 60vh; } /* Tạo khoảng trống để thấy rõ hiệu ứng cuộn */
+        /* Tối ưu hiệu ứng cuộn mượt mà */
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <nav>
-        <a href="#about">Về bản thân (#about)</a>
-        <a href="#projects">Dự án tiêu biểu (#projects)</a>
+    <!-- Thanh điều hướng cố định -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-indigo-600">MyPortfolio</a>
+            <div class="space-x-6 text-sm font-medium">
+                <a href="#about" class="hover:text-indigo-600 transition">Giới thiệu</a>
+                <a href="#projects" class="hover:text-indigo-600 transition">Dự án</a>
+            </div>
+        </div>
     </nav>
 
-    <h1>Trang Liên hệ</h1>
-    <p>Cuộn xuống hoặc bấm vào menu điều hướng để xem cách hoạt động của thẻ neo trên URL.</p>
-    
-    <div class="spacer"></div>
+    <!-- Khu vực Hero / Banner -->
+    <header class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-slate-900">Xin chào, tôi là Thái</h1>
+        <p class="text-lg text-slate-500 font-medium">Full-stack Developer</p>
+    </header>
 
-    <!-- Khu vực About có gán ID -->
-    <section id="about">
-        <h2>Về bản thân</h2>
-        <p>Là một Full-stack Developer làm việc tại Đà Nẵng, tôi chuyên xây dựng các ứng dụng web hiệu suất cao và tự động hóa quy trình. Stack công nghệ chính của tôi bao gồm VueJS cho Frontend và Laravel (PHP), MySQL/MariaDB cho Backend.</p>
+    <!-- Khu vực About -->
+    <section id="about" class="max-w-4xl mx-auto px-6 py-12 scroll-mt-20">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-indigo-500 inline-block pb-1">Về bản thân</h2>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+            <p class="leading-relaxed text-slate-600">
+                Tôi chuyên xây dựng các ứng dụng web hiệu suất cao và hệ thống tự động hóa. 
+                Có kinh nghiệm chuyên sâu trong việc kết nối APIs, thiết kế luồng xử lý dữ liệu realtime và tối ưu hóa cơ sở dữ liệu server-side để đáp ứng lượng lớn yêu cầu đồng thời.
+            </p>
+        </div>
     </section>
 
-    <!-- Khu vực Projects có gán ID -->
-    <section id="projects">
-        <h2>Dự án tiêu biểu</h2>
-        <ul>
-            <li><strong>Web Hội nghị Trực tuyến (KLTN):</strong> Nền tảng "Zoom Clone" sử dụng VueJS, Laravel và LiveKit để xử lý luồng video realtime.</li>
-            <li><strong>Hệ thống SMM Panel:</strong> Xây dựng nền tảng quản lý chỉ số tương tác mạng xã hội, tối ưu database để xử lý lượng lớn request đồng thời.</li>
-            <li><strong>Auto-delivery E-commerce:</strong> Website bán tài khoản tự động, quản lý server-side database trên hệ điều hành Linux/Termux.</li>
-        </ul>
-    </section>
+    <!-- Khu vực Projects -->
+    <section id="projects" class="max-w-4xl mx-auto px-6 py-12 scroll-mt-20 mb-20">
+        <h2 class="text-2xl font-bold mb-6 border-b-2 border-indigo-500 inline-block pb-1">Dự án tiêu biểu</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Dự án 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <h3 class="font-bold text-lg mb-2 text-indigo-600">Web Hội nghị Trực tuyến</h3>
+                <p class="text-xs font-semibold text-slate-400 mb-3 uppercase tracking-wider">LiveKit • Realtime Video</p>
+                <p class="text-sm text-slate-600">Xây dựng nền tảng gọi video trực tuyến, quản lý phòng họp và tối ưu hóa độ trễ luồng dữ liệu cho nhiều người tham gia cùng lúc.</p>
+            </div>
 
-    <div class="spacer"></div>
+            <!-- Dự án 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                <h3 class="font-bold text-lg mb-2 text-indigo-600">SMM Panel & Tự động hóa</h3>
+                <p class="text-xs font-semibold text-slate-400 mb-3 uppercase tracking-wider">API Integration • Database</p>
+                <p class="text-sm text-slate-600">Phát triển nền tảng quản lý chỉ số tương tác, tự động hóa quy trình giao dịch và tối ưu logic lưu trữ dữ liệu lớn.</p>
+            </div>
+
+        </div>
+    </section>
 
 </body>
 </html>
