@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Liên hệ & Thông tin</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+        nav { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 1px solid #ccc; }
+        nav a { margin-right: 15px; text-decoration: none; color: #0366d6; font-weight: bold; }
+        section { padding-top: 60px; margin-bottom: 40px; }
+        .spacer { height: 60vh; } /* Tạo khoảng trống để thấy rõ hiệu ứng cuộn */
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">Về bản thân (#about)</a>
+        <a href="#projects">Dự án tiêu biểu (#projects)</a>
+    </nav>
+
+    <h1>Trang Liên hệ</h1>
+    <p>Cuộn xuống hoặc bấm vào menu điều hướng để xem cách hoạt động của thẻ neo trên URL.</p>
+    
+    <div class="spacer"></div>
+
+    <!-- Khu vực About có gán ID -->
+    <section id="about">
+        <h2>Về bản thân</h2>
+        <p>Là một Full-stack Developer làm việc tại Đà Nẵng, tôi chuyên xây dựng các ứng dụng web hiệu suất cao và tự động hóa quy trình. Stack công nghệ chính của tôi bao gồm VueJS cho Frontend và Laravel (PHP), MySQL/MariaDB cho Backend.</p>
+    </section>
+
+    <!-- Khu vực Projects có gán ID -->
+    <section id="projects">
+        <h2>Dự án tiêu biểu</h2>
+        <ul>
+            <li><strong>Web Hội nghị Trực tuyến (KLTN):</strong> Nền tảng "Zoom Clone" sử dụng VueJS, Laravel và LiveKit để xử lý luồng video realtime.</li>
+            <li><strong>Hệ thống SMM Panel:</strong> Xây dựng nền tảng quản lý chỉ số tương tác mạng xã hội, tối ưu database để xử lý lượng lớn request đồng thời.</li>
+            <li><strong>Auto-delivery E-commerce:</strong> Website bán tài khoản tự động, quản lý server-side database trên hệ điều hành Linux/Termux.</li>
+        </ul>
+    </section>
+
+    <div class="spacer"></div>
+
+</body>
+</html>
